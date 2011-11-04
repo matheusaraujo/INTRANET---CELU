@@ -1,0 +1,19 @@
+﻿---------------------------------------
+-- INTRANET CELU
+-- \App_Data\Tables\Aviso\TBL_AVISO.SQL
+-- # 2011-02-05 - Criação
+-- Matheus Araújo
+---------------------------------------
+
+CREATE TABLE TBL_AVISO
+(
+    COD_AVISO INT IDENTITY,
+    COD_MORADOR INT,
+    DT_DATAHORA SMALLDATETIME,
+    BLN_ATIVO BIT,
+    CHR_ASSUNTO VARCHAR(64),
+    CHR_AVISO VARCHAR(4096),
+    
+    CONSTRAINT PK_AVISO PRIMARY KEY (COD_AVISO),
+    CONSTRAINT FK_AVISO_MORADOR FOREIGN KEY (COD_MORADOR) REFERENCES TBL_MORADOR (COD_MORADOR)    
+)

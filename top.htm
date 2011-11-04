@@ -1,0 +1,124 @@
+﻿<!--
+    INTRANET CELU
+    top.htm
+    Arquivo de cabeçalho
+    # 2010-10-22
+    Matheus Araújo
+-->
+
+<html>
+
+<head>
+
+    <!-- Título -->
+    <title>#</title>    
+    
+    <!-- CSS -->
+    <link rel="Stylesheet" href="App_Style/Default/default.css" />
+
+    <!-- Script -->
+    <script language="javascript" type="text/javascript">
+
+        //-------------------------------//
+        // -- Retorna o dia da semana -- //
+        //-------------------------------//
+
+        function funcWeekDay() {
+            // Data atual
+            var oData = new Date();
+
+            // Vetor com datas
+            var aWeekDay = new Array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
+
+            // Dia da semana
+            var iDia = oData.getDay();
+
+            // Retorna valor
+            return aWeekDay[iDia];
+        }
+
+        //--------------------------------//
+        //-- Retorna a descrição do mês --//
+        //--------------------------------//
+
+        function funcMonth() {
+
+            // Data atual
+            var oData = new Date();
+
+            // Vetor com meses
+            var aMonth = new Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+
+            // Mês atual
+            var iMes = oData.getMonth();
+
+            // Retorna valor
+            return aMonth[iMes];
+        }
+
+        // Script para formatar as horas na página HTM
+        function horas() {
+
+            // Variáveis
+            var now = new Date();               // data completa
+
+            var day = now.getDate();            // dia
+            var month = now.getMonth() + 1;     // mês
+            var year = now.getFullYear();       // ano
+
+            var hour = now.getHours();          // hora
+            var minute = now.getMinutes();      // minutos                                
+
+            // Formata hora 
+            str_minuto = new String(minute);
+            if (str_minuto.length == 1)
+                minute = "0" + minute;
+
+            // Formata minuto
+            str_hora = new String(hour);
+            if (str_hora.length == 1)
+                hour = "0" + hour;
+
+            // Dia da semana
+            var sWeekDay = funcWeekDay();
+            var sMonth = funcMonth();
+
+            // Monta String de retorno 
+            var cdate = sWeekDay + ", " + day + " de " + sMonth + " de " + year + " - " + hour + ":" + minute;
+
+            // Exporta a String montada
+            clock.innerHTML = cdate;
+            setTimeout("horas()", 1000);
+
+        }
+    </script>
+</head>
+
+<body style="background-image:url('App_Images/back.png');">
+    
+    <!-- Tabela para centralizar -->
+    <table width="100%" style="background-image:url('App_Images/back.png');">
+    
+        <tr>
+        
+            <!-- Coluna da esquerda, título -->
+            <td width="20%">
+                <h1>INTRANET CELU</h1>
+            </td>            
+            
+            <!-- Coluna do meio, logo -->
+            <td width="50%" align="center">
+                <a href="http://www.celu.com.br" target="_blank"><img src="App_Images/logo_celu.png" alt="CASA DO ESTUDANTE LUTERANO UNIVERSITÁRIO" border="0px" /></a>
+            </td>
+            
+            <!-- Coluna da direita, relógio -->
+            <td align="center">
+                <span id="clock"></span>
+                <script type="text/javascript" language="javascript">setTimeout("horas()", 1000);</script>
+            </td>
+        </tr>        
+    </table>
+    
+</body>
+
+</html>
