@@ -29,7 +29,7 @@ BEGIN
     ORDER BY
         TBL_AVISO.DT_DATAHORA DESC,
         TBL_AVISO.CHR_ASSUNTO
-END
+END;
 
 -----------------------------------
 -- PROCEDURE LOAD_LIST_AVISO_TOP --
@@ -55,7 +55,7 @@ BEGIN
     ORDER BY
         TBL_AVISO.DT_DATAHORA DESC,
         TBL_AVISO.CHR_ASSUNTO
-END
+END;
 
 ------------------------------------
 -- PROCEDURE LOAD_LIST_AUTO_AVISO --
@@ -87,7 +87,7 @@ BEGIN
     ORDER BY
         TBL_AVISO.DT_DATAHORA DESC,
         TBL_AVISO.CHR_ASSUNTO
-END
+END;
 
 ------------------------------
 -- PROCEDURE LOAD_REG_AVISO --
@@ -116,7 +116,7 @@ BEGIN
 			ON TBL_AVISO.COD_MORADOR = TBL_MORADOR.COD_MORADOR
     WHERE
         TBL_AVISO.COD_AVISO = @P_COD_AVISO
-END
+END;
 
 ----------------------------
 -- PROCEDURE INSERT_AVISO --
@@ -171,5 +171,4 @@ BEGIN
             GETDATE()
         )
     END
-END
-
+END;

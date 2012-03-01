@@ -13,7 +13,8 @@ namespace Celu.Library.WebPage
     {
         TextBox,
         SelectBox,
-        CheckBox
+        CheckBox,
+        Calendar
     }
 
     public enum SQLType
@@ -121,7 +122,7 @@ namespace Celu.Library.WebPage
         private List<CRegField> _fields;        
         private int _identity = -1;
         private Boolean _systemcad;
-
+        
         // elementos html
         private Button _btnEdit;
         private Button _btnSave;
@@ -171,6 +172,11 @@ namespace Celu.Library.WebPage
                 {
                     newscript += "document.getElementById('" + _fields[i].pageelement().ID + "').checked=false;";
                 }
+                else if (_fields[i].fieldtype() == FieldType.Calendar)
+                {
+                    //newscript += "today = new Date();document.getElementById('" + _fields[i].pageelement().ID + "').SelectedDate = today;";
+                }
+
             }
 
             this._btnNew.Attributes.Add("onclick",
@@ -292,6 +298,18 @@ namespace Celu.Library.WebPage
                                 }
                                 catch (Exception ex1)
                                 {
+                                    // empty
+                                }
+                            }
+                            else if (_fields[i].fieldtype() == FieldType.Calendar)
+                            {
+                                try
+                                {
+                                    ((Calendar)_fields[i].pageelement()).SelectedDate = Convert.ToDateTime(query.Field(0, i));
+                                }
+                                catch (Exception ex2)
+                                {
+                                    // empty
                                 }
                             }
                         }
@@ -400,6 +418,12 @@ namespace Celu.Library.WebPage
                         else if (this._fields[i].fieldtype() == FieldType.CheckBox)
                         {
                             aux = ((CheckBox)_fields[i].pageelement()).Checked ? "1" : "0";
+                        }
+                        else if (this._fields[i].fieldtype() == FieldType.Calendar)
+                        {
+                            aux = ((Calendar)_fields[i].pageelement()).SelectedDate.Year.ToString() + "-" +
+                                ((Calendar)_fields[i].pageelement()).SelectedDate.Month.ToString() + "-" +
+                                ((Calendar)_fields[i].pageelement()).SelectedDate.Day.ToString();                                    
                         }
                         else
                         {

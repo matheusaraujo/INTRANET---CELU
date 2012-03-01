@@ -24,7 +24,8 @@ namespace Celu.Library.DataBase
         private SqlCommand _cmdCommand;
 
         // String de conexão
-        private static String _strConnection = "Server=INTRANET;Database=db_celu;User Id=us_celu; Password=inf@celu1011";
+        //private static String _strConnection = "Server=INTRANET;Database=db_celu;User Id=us_celu; Password=inf@celu1011";
+        private static String _strConnection = "Server=USER-PC\\SQLEXPRESS;Database=db_celu;User Id=us_celu; Password=123456";
 
         public static String getString()
         {

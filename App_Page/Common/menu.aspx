@@ -65,6 +65,12 @@
                 <li><a href="../Diretoria/Morador/listMorador.aspx" target="frmMain">Cadastro de Moradores</a></li>
             </ul></td></tr>
             
+            <!-- MENU BEM-ESTAR -->
+            <tr><td style="background-color:Gainsboro"><h3>BEM-ESTAR</h3></td></tr>
+            <tr><td><ul>
+                <li><a href="../BemEstar/PersonaNonGrata/listPersonaNonGrata.aspx" target="frmMain">Persona Non Grata</a></li>
+            </ul></td></tr>
+            
             <!-- MENU SISTEMA -->
             <tr><td style="background-color:Gainsboro"><h3>SISTEMA</h3></td></tr>
             <tr><td><ul>
@@ -78,7 +84,6 @@
                 <li><a href="../Sistema/Aviso/Recado/listTipoRecado.aspx" target="frmMain">Cadastro de Tipo de Recado</a></li>
             </ul></td></tr>
             
-        
         </table>
     
     </div>

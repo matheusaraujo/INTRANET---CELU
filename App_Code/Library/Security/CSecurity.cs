@@ -36,5 +36,7 @@ namespace Celu.Library.Security
         public const String CADASTRO_OBRA = "3005";
         public const String CONTROLE_EMPRESTIMO = "3006";
 
+        public const String CADASTRO_PERSONA_NON_GRATA = "4001";
+
     }
 }
