@@ -70,6 +70,7 @@
             <tr><td><ul>
                 <li><a href="../BemEstar/PersonaNonGrata/listPersonaNonGrata.aspx" target="frmMain">Persona Non Grata</a></li>
                 <li><a href="../BemEstar/HospedePermanente/listHospedePermanente.aspx" target="frmMain">Hóspede Permanente</a></li>
+                <li><a href="../BemEstar/HospedePermanentePagamento/cadHospedePermanentePagamento.aspx" target="frmMain">Hóspede Permanente - Pagamento</a></li>
             </ul></td></tr>
             
             <!-- MENU SISTEMA -->

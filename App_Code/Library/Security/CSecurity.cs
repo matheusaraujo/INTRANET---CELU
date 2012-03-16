@@ -38,6 +38,7 @@ namespace Celu.Library.Security
 
         public const String CADASTRO_PERSONA_NON_GRATA = "4001";
         public const String CADASTRO_HOSPEDE_PERMANENTE = "4002";
+        public const String CADASTRO_HOSPEDE_PERMANENTE_PAGAMENTO = "4003";
 
     }
 }

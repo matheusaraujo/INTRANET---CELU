@@ -1,0 +1,77 @@
+﻿---------------------------------------
+-- INTRANET CELU
+-- \App_Data\Procedures\BemEstar\TBL_HOSPEDE_PERMANENTE_PAGAMENTO.SQL
+-- # 2012-03-16 - Criação
+-- Matheus Araújo
+---------------------------------------
+
+----------------------------------------------------------
+-- PROCEDURE VERIFY_INSERT_HOSPEDE_PERMANENTE_PAGAMENTO --
+----------------------------------------------------------
+
+CREATE PROCEDURE VERIFY_INSERT_HOSPEDE_PERMANENTE_PAGAMENTO
+(
+    @P_COD_HOSPEDE_PERMANENTE INT,
+    @P_INT_MES INT,
+    @P_INT_ANO INT,
+    @P_FLT_VALOR NUMERIC(10,2),
+    @P_DT_DATA_PAGAMENTO SMALLDATETIME,
+    @P_CHR_OBSERVACAO VARCHAR(1024)
+)
+AS
+BEGIN
+    IF
+    ((
+        SELECT
+            COUNT(*)
+        FROM
+            TBL_HOSPEDE_PERMANENTE_PAGAMENTO
+        WHERE
+            TBL_HOSPEDE_PERMANENTE_PAGAMENTO.INT_MES = @P_INT_MES AND
+            TBL_HOSPEDE_PERMANENTE_PAGAMENTO.INT_ANO = @P_INT_ANO AND
+            TBL_HOSPEDE_PERMANENTE_PAGAMENTO.COD_HOSPEDE_PERMANENTE = @P_COD_HOSPEDE_PERMANENTE
+    ) > 0)    
+    BEGIN
+        SELECT 'O pagamento já foi registrado!' AS P_CHR_MSG_ERRO
+    END
+    ELSE
+    BEGIN
+        SELECT '' AS P_CHR_MSG_ERRO
+    END
+END
+
+---------------------------------------------------
+-- PROCEDURE INSERT_HOSPEDE_PERMANENTE_PAGAMENTO --
+---------------------------------------------------
+
+CREATE PROCEDURE INSERT_HOSPEDE_PERMANENTE_PAGAMENTO
+(    
+    @P_COD_HOSPEDE_PERMANENTE INT,
+    @P_INT_MES INT,
+    @P_INT_ANO INT,
+    @P_FLT_VALOR NUMERIC(10,2),
+    @P_DT_DATA_PAGAMENTO SMALLDATETIME,
+    @P_CHR_OBSERVACAO VARCHAR(1024)
+)
+AS
+BEGIN
+    INSERT INTO TBL_HOSPEDE_PERMANENTE_PAGAMENTO
+    (
+        TBL_HOSPEDE_PERMANENTE.COD_HOSPEDE_PERMANENTE,
+        TBL_HOSPEDE_PERMANENTE.INT_MES,
+        TBL_HOSPEDE_PERMANENTE.INT_ANO,
+        TBL_HOSPEDE_PERMANENTE.FLT_VALOR,
+        TBL_HOSPEDE_PERMANENTE.DT_DATA_PAGAMENTO,
+        TBL_HOSPEDE_PERMANENTE.CHR_OBSERVACAO
+    )
+    VALUES
+    (
+        @P_COD_HOSPEDE_PERMANENTE,
+        @P_INT_MES,
+        @P_INT_ANO,
+        @P_FLT_VALOR,
+        @P_DT_DATA_PAGAMENTO,
+        @P_CHR_OBSERVACAO
+    )    
+END
+
