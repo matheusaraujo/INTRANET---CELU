@@ -1,13 +1,12 @@
 ﻿<!--
     INTRANET CELU
-    App_Page/BemEstar/PersonaNonGrata/listPersonaNonGrata.aspx
-    Página de listagem de persona non grata
+    App_Page/BemEstar/HospedePermanente/listHospedePermanente.aspx
+    Página de listagem de hóspede permanente
     # 2012-03-01
     Matheus Araújo
 -->
 
-
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="listPersonaNonGrata.aspx.cs" Inherits="App_Page_BemEstar_PersonaNonGrata_listPersonaNonGrata" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="listHospedePermanente.aspx.cs" Inherits="App_Page_BemEstar_HospedePermanente_listHospedePermanente" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -29,7 +28,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <h1>Lista de Persona Non Grata</h1>
+        <h1>Lista de Hóspede Permanente</h1>
         
         <br />
         
@@ -50,15 +49,14 @@
         
         <table id="tblList" runat="server" style="width:80%" align="center">
             <tr style="background-color:Silver">
-                <td><h3>Data Entrada</h3></td>
-                <td><h3>Data Saída</h3></td>
                 <td><h3>Quarto</h3></td>
                 <td><h3>Nome</h3></td>
-                <td><h3>Período em Aberto</h3></td>
-                <td><h3>Débito</h3></td>
-                <td><h3>Observação</h3></td>
-                <td><h3>Em aberto</h3></td>
-                <td colspan="2"><h3>Observação</h3></td>
+                <td><h3>RG</h3></td>
+                <td><h3>CPF</h3></td>
+                <td><h3>Cidade de Origem</h3></td>
+                <td><h3>Curso</h3></td>
+                <td><h3>Recepção</h3></td>                
+                <td colspan="2"><h3>Ativo</h3></td>
             </tr>
         </table>
         
@@ -67,7 +65,7 @@
         <table style="width:80%" align="center">
             <tr>
                 <td align="right">
-                    <input type="button" value="Inserir Novo" onclick="javascript:window.navigate('cadPersonaNonGrata.aspx?personanongrata=-1;');" />
+                    <input type="button" value="Inserir Novo" onclick="javascript:window.navigate('cadHospedePermanente.aspx?hospedepermanente=-1;');" />
                 </td>
             </tr>
         </table>

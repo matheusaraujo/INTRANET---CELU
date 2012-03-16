@@ -37,6 +37,7 @@ namespace Celu.Library.Security
         public const String CONTROLE_EMPRESTIMO = "3006";
 
         public const String CADASTRO_PERSONA_NON_GRATA = "4001";
+        public const String CADASTRO_HOSPEDE_PERMANENTE = "4002";
 
     }
 }

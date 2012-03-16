@@ -24,9 +24,14 @@ public partial class App_Page_BemEstar_PersonaNonGrata_listPersonaNonGrata : Cel
         {
             this.loadPage();
         }
-
     }
+
     protected void cbListAll_CheckedChanged(object sender, EventArgs e)
+    {
+        this.loadPage();
+    }
+
+    protected void cbListDetal_CheckedChanged(object sender, EventArgs e)
     {
         this.loadPage();
     }
@@ -59,13 +64,9 @@ public partial class App_Page_BemEstar_PersonaNonGrata_listPersonaNonGrata : Cel
             this.tblList.Rows[0].Cells[6].Visible =
             this.tblList.Rows[0].Cells[8].Visible =
             this.cbListDetal.Checked;
-        
 
         return base.loadPage(this.tblList, true, false, true, "Editar", "javascript:window.navigate('cadPersonaNonGrata.aspx?personanongrata=#0;');");
 
     }
-    protected void cbListDetal_CheckedChanged(object sender, EventArgs e)
-    {
-        this.loadPage();
-    }
+
 }

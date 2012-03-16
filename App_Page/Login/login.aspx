@@ -97,8 +97,6 @@
 
         }
         
-        /* NÃO É MAIS USADA
-
         function verificaBrowser() {
             var browserName = navigator.appName;
 
@@ -108,14 +106,13 @@
             }
 
         }
-        */  
+        
     </script>
     
 </head>
 
 <!-- Corpo da página -->
-<!--<body onload="javascript:verificaBrowser();">-->
-<body>
+<body onload="javascript:verificaBrowser();">
     <form id="form1" runat="server">
     <div>
     

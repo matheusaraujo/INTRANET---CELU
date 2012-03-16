@@ -69,6 +69,7 @@
             <tr><td style="background-color:Gainsboro"><h3>BEM-ESTAR</h3></td></tr>
             <tr><td><ul>
                 <li><a href="../BemEstar/PersonaNonGrata/listPersonaNonGrata.aspx" target="frmMain">Persona Non Grata</a></li>
+                <li><a href="../BemEstar/HospedePermanente/listHospedePermanente.aspx" target="frmMain">Hóspede Permanente</a></li>
             </ul></td></tr>
             
             <!-- MENU SISTEMA -->
