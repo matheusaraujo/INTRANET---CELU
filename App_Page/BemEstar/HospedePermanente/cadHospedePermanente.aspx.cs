@@ -52,7 +52,7 @@ public partial class App_Page_BemEstar_HospedePermanente_cadHospedePermanente : 
         base.addField(new CRegField(this.txtNome, "CHR_NOME", FieldType.TextBox, SQLType.Charactere, "Nome", true, true, false));
         base.addField(new CRegField(this.txtRg, "CHR_RG", FieldType.TextBox, SQLType.Charactere, "RG", true, true, false));
         base.addField(new CRegField(this.txtCpf, "CHR_CPF", FieldType.TextBox, SQLType.Charactere, "CPF", true, true, false));
-        base.addField(new CRegField(this.slctCidade, "COD_CIDADE_ORIGEM", FieldType.SelectBox, SQLType.Numeric, "Cidade de Origem", true, true, false));
+        base.addField(new CRegField(this.slctCidade, "COD_CIDADE_ORIGEM", FieldType.SelectBox, SQLType.Numeric, "Cidade de Origem", true, false, false));
         base.addField(new CRegField(this.txtCurso, "CHR_CURSO", FieldType.TextBox, SQLType.Charactere, "Curso", true, true, false));
         base.addField(new CRegField(this.txtRecepcao, "CHR_RECEPCAO", FieldType.TextBox, SQLType.Charactere, "Recepção", true, false, false));
         base.addField(new CRegField(this.cbAtivo, "BLN_ATIVO", FieldType.CheckBox, SQLType.Bit, "Ativo", true, false, false));
