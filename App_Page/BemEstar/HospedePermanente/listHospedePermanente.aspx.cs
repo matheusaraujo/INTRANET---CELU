@@ -43,7 +43,7 @@ public partial class App_Page_BemEstar_HospedePermanente_listHospedePermanente :
 
         if (this.cbListDetal.Checked)
         {
-            base.setFields("COD_HOSPEDE_PERMANENTE;CHR_DESC_QUARTO;CHR_NOME;CHR_RG;CHR_CPF;CHR_CIDADE_ORIGEM;CHR_CURSO;CHR_RECEPCAO;CHR_ATIVO");
+            base.setFields("COD_HOSPEDE_PERMANENTE;CHR_DESC_QUARTO;CHR_NOME;CHR_RG;CHR_CPF;CHR_CIDADE_ORIGEM;CHR_CURSO;CHR_RECEPCAO;INT_DIA_VENCIMENTO;DT_DATA_VENCIMENTO;CHR_ATIVO");
         }
         else
         {
@@ -58,7 +58,9 @@ public partial class App_Page_BemEstar_HospedePermanente_listHospedePermanente :
             this.tblList.Rows[0].Cells[3].Visible =
             this.tblList.Rows[0].Cells[4].Visible =
             this.tblList.Rows[0].Cells[5].Visible =
-            this.tblList.Rows[0].Cells[6].Visible =            
+            this.tblList.Rows[0].Cells[6].Visible =
+            this.tblList.Rows[0].Cells[7].Visible =
+            this.tblList.Rows[0].Cells[8].Visible =            
             this.cbListDetal.Checked;
 
         return base.loadPage(this.tblList, true, false, true, "Editar", "javascript:window.navigate('cadHospedePermanente.aspx?hospedepermanente=#0;');");

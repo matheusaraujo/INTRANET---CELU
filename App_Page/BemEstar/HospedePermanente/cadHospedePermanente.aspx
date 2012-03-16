@@ -80,6 +80,18 @@
                 <td><asp:TextBox ID="txtRecepcao" runat="server"></asp:TextBox></td>
             </tr>
             
+            <!-- Dia de vencimento -->
+            <tr>
+                <td align="right">Dia (do mês) de vencimento:&nbsp;</td>
+                <td><asp:TextBox ID="txtDiaVencimento" runat="server"></asp:TextBox></td>
+            </tr>
+            
+            <!-- Data de ingresso -->
+            <tr>
+                <td align="right">Data de ingresso:&nbsp;</td>
+                <td><asp:Calendar ID="calDtIngresso" runat="server"></asp:Calendar></td>
+            </tr>
+            
             <!-- Ativo -->
             <tr>
                 <td colspan="2" align="center">

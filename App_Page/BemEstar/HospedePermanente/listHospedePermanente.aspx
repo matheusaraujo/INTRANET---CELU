@@ -47,7 +47,7 @@
             </tr>
         </table>
         
-        <table id="tblList" runat="server" style="width:80%" align="center">
+        <table id="tblList" runat="server" style="width:90%" align="center">
             <tr style="background-color:Silver">
                 <td><h3>Quarto</h3></td>
                 <td><h3>Nome</h3></td>
@@ -55,14 +55,16 @@
                 <td><h3>CPF</h3></td>
                 <td><h3>Cidade de Origem</h3></td>
                 <td><h3>Curso</h3></td>
-                <td><h3>Recepção</h3></td>                
+                <td><h3>Recepção</h3></td>      
+                <td><h3>Dia de Vencimento</h3></td>          
+                <td><h3>Data de ingresso</h3></td>
                 <td colspan="2"><h3>Ativo</h3></td>
             </tr>
         </table>
         
         <br />
         
-        <table style="width:80%" align="center">
+        <table style="width:90%" align="center">
             <tr>
                 <td align="right">
                     <input type="button" value="Inserir Novo" onclick="javascript:window.navigate('cadHospedePermanente.aspx?hospedepermanente=-1;');" />
