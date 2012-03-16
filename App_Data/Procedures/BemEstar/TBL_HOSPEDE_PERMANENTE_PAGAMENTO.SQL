@@ -75,3 +75,34 @@ BEGIN
     )    
 END
 
+----------------------------------------------------------------
+-- PROCEDURE LOAD_LIST_HOSPEDE_PERMANENTE_PAGAMENTO_MES_ATUAL --
+----------------------------------------------------------------
+
+CREATE PROCEDURE LOAD_LIST_HOSPEDE_PERMANENTE_PAGAMENTO_MES_ATUAL
+AS
+BEGIN
+    SELECT
+        TBL_HOSPEDE_PERMANENTE.CHR_NOME,
+        (
+            CASE (
+                SELECT
+                    COUNT (*)
+                FROM
+                    TBL_HOSPEDE_PERMANENTE_PAGAMENTO
+                WHERE
+                    TBL_HOSPEDE_PERMANENTE_PAGAMENTO.COD_HOSPEDE_PERMANENTE = TBL_HOSPEDE_PERMANENTE.COD_HOSPEDE_PERMANENTE AND
+                    TBL_HOSPEDE_PERMANENTE_PAGAMENTO.INT_MES = DATEPART ( month, GETDATE()) AND
+                    TBL_HOSPEDE_PERMANENTE_PAGAMENTO.INT_ANO = DATEPART ( year, GETDATE())
+            )
+            WHEN 0 THEN 'Não'
+            ELSE 'Sim' END
+        ) AS CHR_PAGO,
+        TBL_HOSPEDE_PERMANENTE.INT_DIA_VENCIMENTO
+    FROM
+        TBL_HOSPEDE_PERMANENTE
+    WHERE
+        TBL_HOSPEDE_PERMANENTE.BLN_ATIVO = 1
+    ORDER BY
+        TBL_HOSPEDE_PERMANENTE.CHR_NOME    
+END

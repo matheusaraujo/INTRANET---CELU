@@ -93,7 +93,9 @@
                 <td><asp:Button ID="btnSave" runat="server" Text="Inserir" onclick="btnSave_Click" /></td>                
                 <td><asp:Button ID="btnDel" runat="server" Text="Excluir" onclick="btnDel_Click" style="visibility:hidden" /></td>                
                 <td><asp:Button ID="btnNew" runat="server" Text="Novo" /></td>
-                <td><input type="button" value="Buscar" id="btnFind" runat="server" onclick="#" style="visibility:hidden"/></td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center"><input type="button" value="Controle de Pagamento" id="btnFind" runat="server" onclick="javascript:window.navigate('hospedePermanentePagamento.aspx');"/></td>
             </tr>
         </table>
         
