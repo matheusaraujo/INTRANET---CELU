@@ -1,6 +1,6 @@
 ﻿/***************************************************
  * INTRANET CELU
- * \App_Page\BemEstar\PersonaNonGrata\listMesAtual.aspx.cs
+ * \App_Page\BemEstar\HospedePermanentePagamento\listMesAtual.aspx.cs
  * Lista de Controle de Pagamento para Hóspede Permanente do mês atual
  * # 2012-03-16
  * Matheus Araújo 

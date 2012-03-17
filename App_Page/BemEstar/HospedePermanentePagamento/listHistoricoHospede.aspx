@@ -21,6 +21,9 @@
     <!-- Arquivo CSS -->
     <link rel="Stylesheet" href="../../../App_Style/Default/default.css" />
     
+    <!-- Script -->
+    <script type="text/javascript" language="javascript" src="listHistoricoHospede.js" ></script>
+    
 </head>
 
 <!-- Corpo da página -->
@@ -36,7 +39,41 @@
             <table align="center" width="60%">
                 <tr>
                     <td align="right" width="30%" style="border-bottom:solid 1px #000; border-top: solid 1px #000">Hóspede:&nbsp;</td>
-                    <td style="border-bottom:solid 1px #000; border-top: solid 1px #000"><asp:DropDownList ID="slctHospede" runat="server"></asp:DropDownList></td>
+                    <td style="border-bottom:solid 1px #000; border-top: solid 1px #000">
+                        <asp:DropDownList ID="slctHospede" runat="server" 
+                            onselectedindexchanged="slctHospede_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></td>
+                </tr>
+            </table>
+            
+            <table id="tblList" runat="server" style="width:80%; visibility:hidden;" align="center"></table>
+            
+            <br />
+            
+            <table style="width:80%;border: solid 1px #000" align="center">
+                <tr>
+                    <td width="30%" align="right">Ingresso:&nbsp;</td>
+                    <td id="tdIngresso"></td>
+                </tr>
+                <tr>
+                    <td align="right">Situação:&nbsp;</td>
+                    <td id="tdSituacao"></td>
+                </tr>
+                <tr>
+                    <td align="right">Saída:&nbsp;</td>
+                    <td id="tdSaida"></td>
+                </tr>
+            </table>
+            
+            <br />
+            
+            <table id="tblListOut" style="width:80%" align="center">
+                <tr style="background-color:Silver">
+                    <td><h3>Ano</h3></td>
+                    <td><h3>Mês</h3></td>
+                    <td><h3>Pago</h3></td>
+                    <td><h3>Valor</h3></td>
+                    <td><h3>Data de Pagamento</h3></td>
+                    <td colspan="2"><h3>Observação</h3></td>
                 </tr>
             </table>
             
