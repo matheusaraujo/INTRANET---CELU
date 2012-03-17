@@ -58,6 +58,7 @@
                 <td><h3>Recepção</h3></td>      
                 <td><h3>Dia de Vencimento</h3></td>          
                 <td><h3>Data de ingresso</h3></td>
+                <td><h3>Data de saída</h3></td>
                 <td colspan="2"><h3>Ativo</h3></td>
             </tr>
         </table>

@@ -34,67 +34,69 @@
             
             <!-- Código, oculto -->
             <tr style="display:none">
-                <td align="right" width="30%">Código:&nbsp;</td>                
-                <td><asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox></td>
+                <td align="right" width="30%" colspan="2">Código:&nbsp;</td>                
+                <td><asp:TextBox ID="txtCodigo" runat="server" colspan="2"></asp:TextBox></td>
             </tr>
             
             <!-- Quarto -->
             <tr>
-                <td align="right">Quarto:&nbsp;</td>
-                <td><asp:DropDownList ID="slctQuarto" runat="server"></asp:DropDownList></td>
+                <td align="right" colspan="2">Quarto:&nbsp;</td>
+                <td><asp:DropDownList ID="slctQuarto" runat="server" colspan="2"></asp:DropDownList></td>
             </tr>
             
             <!-- Nome -->
             <tr>
-                <td align="right">Nome:&nbsp;</td>                
-                <td ><asp:TextBox ID="txtNome" runat="server" /> </td>
+                <td align="right" colspan="2">Nome:&nbsp;</td>                
+                <td ><asp:TextBox ID="txtNome" runat="server" colspan="2 /> </td>
             </tr>
             
             <!-- RG -->
             <tr>
-                <td align="right">RG:&nbsp;</td>
-                <td><asp:TextBox ID="txtRg" runat="server"></asp:TextBox></td>
+                <td align="right" colspan="2">RG:&nbsp;</td>
+                <td><asp:TextBox ID="txtRg" runat="server" colspan="2"></asp:TextBox></td>
             </tr>
             
             <!-- CPF -->
             <tr>
-                <td align="right">CPF:&nbsp;</td>
-                <td><asp:TextBox ID="txtCpf" runat="server"></asp:TextBox></td>
+                <td align="right" colspan="2">CPF:&nbsp;</td>
+                <td><asp:TextBox ID="txtCpf" runat="server" colspan="2"></asp:TextBox></td>
             </tr>
             
             <!-- Cidade de Origem -->
             <tr>
-                <td align="right">Cidade de Origem:&nbsp;</td>
-                <td><asp:DropDownList ID="slctCidade" runat="server"></asp:DropDownList></td>
+                <td align="right" colspan="2">Cidade de Origem:&nbsp;</td>
+                <td><asp:DropDownList ID="slctCidade" runat="server" colspan="2></asp:DropDownList></td>
             </tr>
             
             <!-- Curso -->
             <tr>
-                <td align="right">Curso:&nbsp;</td>
-                <td><asp:TextBox ID="txtCurso" runat="server"></asp:TextBox></td>
+                <td align="right" colspan="2">Curso:&nbsp;</td>
+                <td><asp:TextBox ID="txtCurso" runat="server" colspan="2"></asp:TextBox></td>
             </tr>
             
             <!-- Recepção -->
             <tr>
-                <td align="right">Recepção:&nbsp;</td>
-                <td><asp:TextBox ID="txtRecepcao" runat="server"></asp:TextBox></td>
+                <td align="right" colspan="2">Recepção:&nbsp;</td>
+                <td><asp:TextBox ID="txtRecepcao" runat="server" colspan="2"></asp:TextBox></td>
             </tr>
             
             <!-- Dia de vencimento -->
             <tr>
-                <td align="right">Dia (do mês) de vencimento:&nbsp;</td>
-                <td><asp:TextBox ID="txtDiaVencimento" runat="server"></asp:TextBox></td>
+                <td align="right" colspan="2">Dia (do mês) de vencimento:&nbsp;</td>
+                <td><asp:TextBox ID="txtDiaVencimento" runat="server" colspan="2"></asp:TextBox></td>
             </tr>
             
-            <!-- Data de ingresso -->
+            <!-- Datas de ingresso e saída-->
             <tr>
                 <td align="right">Data de ingresso:&nbsp;</td>
                 <td><asp:Calendar ID="calDtIngresso" runat="server"></asp:Calendar></td>
+                <td align="right">Data de saída:&nbsp;</td>
+                <td><asp:Calendar ID="calDtSaida" runat="server"></asp:Calendar></td>
             </tr>
             
             <!-- Ativo -->
             <tr>
-                <td colspan="2" align="center">
+                <td colspan="4" align="center">
                     <asp:CheckBox ID="cbAtivo" runat="server" /> &nbsp; Ativo 
                 </td>
             </tr>
