@@ -34,7 +34,7 @@
         <ul>        
             <li><a href="cadHospedePermanentePagamento.aspx">Registrar pagamento</a></li>            
             <li><a href="listMesAtual.aspx">Mês atual</a></li>            
-            <li><a href="#">Histórico por Hóspede</a></li>
+            <li><a href="listHistoricoHospede.aspx">Histórico por Hóspede</a></li>
         </ul>
     </div>
     </form>
