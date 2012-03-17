@@ -20,7 +20,7 @@ function __doPostBack(eventTarget, eventArgument) {
 }
 
 // --------------------------------------------------
-// -- function __openPopUp(page, name, center, h, w, menubar, resizable, scrollbars) {
+// -- function __openPopUp(page, name, center, h, w, menubar, resizable, scrollbars)
 // -- abre um popUp, centralizado ou não
 // --------------------------------------------------
 
@@ -43,4 +43,38 @@ function __openPopUp(page, name, center, h, w, menubar, resizable, scrollbars) {
 
     // abre o popup
     window.open(page, name, settings);
+}
+
+// --------------------------------------------------
+// -- function __formatmonth(par)
+// -- retorna nome dos meses
+// --------------------------------------------------
+
+function __formatmonth(par) {
+    if (par == 1)
+        return '1 - Janeiro';
+    else if (par == 2)
+        return '2 - Fevereiro';
+    else if (par == 3)
+        return '3 - Março';
+    else if (par == 4)
+        return '4 - Abril';
+    else if (par == 5)
+        return '5 - Maio';
+    else if (par == 6)
+        return '6 - Junho';
+    else if (par == 7)
+        return '7 - Julho';
+    else if (par == 8)
+        return '8 - Agosto';
+    else if (par == 9)
+        return '9 - Setembro';
+    else if (par == 10)
+        return '10 - Outubro';
+    else if (par == 11)
+        return '11 - Novembro';
+    else if (par == 12)
+        return '12 - Dezembro';
+    else
+        return '#0 - Error#';
 }

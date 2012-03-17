@@ -21,6 +21,9 @@
     <!-- Arquivo CSS -->
     <link rel="Stylesheet" href="../../../App_Style/Default/default.css" />
     
+    <!-- Script geral -->
+    <script type="text/javascript" language="javascript" src="../../../App_Script/Script.js"></script>
+    
     <!-- Script -->
     <script type="text/javascript" language="javascript" src="listHistoricoHospede.js" ></script>
     
@@ -30,6 +33,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+        
+        	<input type="hidden" id="hdControl" runat="server" />
+		        
+            <input type="hidden" id="__EVENTTARGET" name="__EVENTTARGET" />
+            <input type="hidden" id="__EVENTARGUMENT" name="__EVENTARGUMENT" />
             
             <h1>Pagamento de Hóspede Permanente - Histórico por Hóspede</h1>
             
@@ -79,6 +87,12 @@
             
             <br />
             <br />
+            
+            <table style="width:80%" align="center">
+                <tr><td align="center">
+                    <input type="button" value="Controle de Pagamento" id="btnFind" runat="server" onclick="javascript:window.navigate('hospedePermanentePagamento.aspx');"/>
+                </td></tr>
+            </table>
     
         </div>
     </form>

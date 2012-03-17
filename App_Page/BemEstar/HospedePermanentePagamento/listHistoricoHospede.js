@@ -42,7 +42,7 @@ function adjust() {
 
         // month
         var cell = row.insertCell();
-        cell.innerText = formatmonth(dt.getMonth());
+        cell.innerText = __formatmonth(dt.getMonth());
 
         // get the pay information
         // this a fuck implementation!!
@@ -68,7 +68,7 @@ function adjust() {
 
                 // delete
                 var cell = row.insertCell();
-                cell.innerHTML = "<a href=\"#\" onclick=\"javascript:alert('" + table.rows[i].cells[0].innerText + "');\">Excluir Registro</a>";
+                cell.innerHTML = "<a href=\"#\" onclick=\"javascript:deletereg('" + table.rows[i].cells[0].innerText + "');\">Excluir Registro</a>";
             }
         }
 
@@ -110,31 +110,8 @@ function adjust() {
 
 }
 
-function formatmonth(par) {
-    if (par == 1)
-        return '1 - Janeiro';
-    else if (par == 2)
-        return '2 - Fevereiro';
-    else if (par == 3)
-        return '3 - Março';
-    else if (par == 4)
-        return '4 - Abril';
-    else if (par == 5)
-        return '5 - Maio';
-    else if (par == 6)
-        return '6 - Junho';
-    else if (par == 7)
-        return '7 - Julho';
-    else if (par == 8)
-        return '8 - Agosto';
-    else if (par == 9)
-        return '9 - Setembro';
-    else if (par == 10)
-        return '10 - Outubro';
-    else if (par == 11)
-        return '11 - Novembro';
-    else if (par == 12)
-        return '12 - Dezembro';
-    else
-        return '#0 - Error#';        
+function deletereg(par) {
+    document.getElementById('hdControl').value = 'delete;' + par;
+    __doPostBack('', '');
 }
+
