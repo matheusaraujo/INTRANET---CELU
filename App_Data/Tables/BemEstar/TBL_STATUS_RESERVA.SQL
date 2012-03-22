@@ -1,0 +1,15 @@
+﻿---------------------------------------
+-- INTRANET CELU
+-- \App_Data\Tables\BemEstar\TBL_STATUS_RESERVA.SQL
+-- # 2012-03-21 - Criação
+-- Matheus Araújo
+---------------------------------------
+
+CREATE TABLE TBL_STATUS_RESERVA
+(
+    COD_STATUS_RESERVA INT IDENTITY,
+    CHR_STATUS_RESERVA VARCHAR(128),
+    
+    CONSTRAINT PK_STATUS_RESERVA PRIMARY KEY (COD_STATUS_RESERVA),
+    CONSTRAINT UN_STATUS_RESERVA UNIQUE (CHR_STATUS_RESERVA)
+)

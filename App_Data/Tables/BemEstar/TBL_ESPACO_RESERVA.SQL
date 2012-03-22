@@ -1,0 +1,15 @@
+﻿---------------------------------------
+-- INTRANET CELU
+-- \App_Data\Tables\BemEstar\TBL_ESPACO_RESERVA.SQL
+-- # 2012-03-21 - Criação
+-- Matheus Araújo
+---------------------------------------
+
+CREATE TABLE TBL_ESPACO_RESERVA
+(
+    COD_ESPACO_RESERVA INT IDENTITY,
+    CHR_NOME_ESPACO_RESERVA VARCHAR(128),
+    
+    CONSTRAINT PK_ESPACO_RESERVA PRIMARY KEY (COD_ESPACO_RESERVA),
+    CONSTRAINT UN_ESPACO_RESERVA UNIQUE (CHR_NOME_ESPACO_RESERVA)
+)

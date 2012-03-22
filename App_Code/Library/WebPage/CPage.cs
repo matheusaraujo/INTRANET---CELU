@@ -207,5 +207,40 @@ namespace Celu.Library.WebPage
 
 
         }
+
+        public Boolean isValidTime(String value){
+
+            if (value.Length != 5)
+                return false;
+            if (value[2] != ':')
+                return false;
+            if (!isNumeric(value.Substring(0, 2)))
+                return false;
+            if (!isNumeric(value.Substring(3, 2)))
+                return false;
+
+            int x = (value[0]-48) * 10 + (value[1]-48);
+
+            if (!(x >= 0 && x < 24))
+                return false;
+
+            x = (value[3] - 48) * 10 + (value[4] - 48);
+
+            if (!(x >= 0 && x < 60))
+                return false;
+
+            return true;
+        }
+
+        public Boolean isNumeric(String value)
+        {
+            for (int i = 0; i < value.Length; i++)
+            {
+                if (!Char.IsNumber(value[i]))
+                    return false;
+            }
+
+            return true;
+        }
     }
 }

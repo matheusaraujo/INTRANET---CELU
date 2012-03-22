@@ -1,0 +1,133 @@
+﻿---------------------------------------
+-- INTRANET CELU
+-- \App_Data\Procedures\BemEstar\TBL_ESPACO_RESERVA.SQL
+-- # 2012-03-21 - Criação
+-- Matheus Araújo
+---------------------------------------
+-----------------------------------------
+-- PROCEUDURE LOAD_LIST_ESPACO_RESERVA --
+-----------------------------------------
+
+CREATE PROCEDURE LOAD_LIST_ESPACO_RESERVA
+AS
+BEGIN
+	SELECT
+		TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA,
+		TBL_ESPACO_RESERVA.CHR_NOME_ESPACO_RESERVA		
+	FROM
+		TBL_ESPACO_RESERVA		
+	ORDER BY
+		TBL_ESPACO_RESERVA.CHR_NOME_ESPACO_RESERVA
+END
+
+---------------------------------------
+-- PROCEDURE LOAD_REG_ESPACO_RESERVA --
+---------------------------------------
+
+CREATE PROCEDURE LOAD_REG_ESPACO_RESERVA
+(
+    @P_COD_ESPACO_RESERVA INT
+)
+AS
+BEGIN
+    SELECT
+		TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA,
+		TBL_ESPACO_RESERVA.CHR_NOME_ESPACO_RESERVA		
+	FROM
+		TBL_ESPACO_RESERVA		
+	WHERE
+	    TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA = @P_COD_ESPACO_RESERVA
+END
+
+--------------------------------------------
+-- PROCEDURE VERIFY_INSERT_ESPACO_RESERVA --
+--------------------------------------------
+
+CREATE PROCEDURE VERIFY_INSERT_ESPACO_RESERVA
+(
+    @P_COD_ESPACO_RESERVA INT,
+    @P_CHR_NOME_ESPACO_RESERVA VARCHAR(128)
+)
+AS
+BEGIN
+    IF 
+    (
+        SELECT
+            COUNT(*)
+        FROM
+            TBL_ESPACO_RESERVA
+        WHERE
+            TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA <> @P_COD_ESPACO_RESERVA AND
+            TBL_ESPACO_RESERVA.CHR_NOME_ESPACO_RESERVA = @P_CHR_NOME_ESPACO_RESERVA
+    ) 
+    > 0
+    BEGIN
+        SELECT 'O Espaço já foi cadastrado!' AS P_CHR_MSG_ERRO
+    END
+    ELSE
+    BEGIN
+        SELECT '' AS P_CHR_MSG_ERRO
+    END
+END
+
+-------------------------------------
+-- PROCEDURE INSERT_ESPACO_RESERVA --
+-------------------------------------
+
+CREATE PROCEDURE INSERT_ESPACO_RESERVA
+(
+    @P_COD_ESPACO_RESERVA INT,
+    @P_CHR_NOME_ESPACO_RESERVA VARCHAR(128)
+)
+AS
+BEGIN
+    IF 
+    (
+        SELECT
+            COUNT(*)
+        FROM
+            TBL_ESPACO_RESERVA
+        WHERE
+            TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA = @P_COD_ESPACO_RESERVA            
+    ) 
+    > 0
+    BEGIN
+        UPDATE
+            TBL_ESPACO_RESERVA
+        SET
+            TBL_ESPACO_RESERVA.CHR_NOME_ESPACO_RESERVA = @P_CHR_NOME_ESPACO_RESERVA
+        WHERE
+            TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA = @P_COD_ESPACO_RESERVA
+    END
+    ELSE
+    BEGIN
+        INSERT INTO TBL_ESPACO_RESERVA
+        (
+            TBL_ESPACO_RESERVA.CHR_NOME_ESPACO_RESERVA
+        )
+        VALUES
+        (
+            @P_CHR_NOME_ESPACO_RESERVA
+        )
+    END
+END
+
+-------------------------------------
+-- PROCEDURE DELETE_ESPACO_RESERVA --
+-------------------------------------
+
+CREATE PROCEDURE DELETE_ESPACO_RESERVA
+(
+    @P_COD_ESPACO_RESERVA INT
+)
+AS
+BEGIN
+ 
+    SELECT '' AS P_CHR_MSG_ERRO
+    
+    DELETE
+        TBL_ESPACO_RESERVA
+    WHERE
+        TBL_ESPACO_RESERVA.COD_ESPACO_RESERVA = @P_COD_ESPACO_RESERVA
+ 
+END
