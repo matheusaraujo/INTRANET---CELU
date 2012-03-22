@@ -25,6 +25,24 @@ public partial class App_Page_BemEstar_Reserva_cadReserva : Celu.Library.WebPage
         if (!IsPostBack)
         {
             base.loadPage();
+
+            if (!this.txtDataHoraInicial.Text.Equals(String.Empty))
+            {
+                DateTime dt = Convert.ToDateTime(this.txtDataHoraInicial.Text);
+
+                this.calDataInicial.SelectedDate = new DateTime(dt.Year, dt.Month, dt.Day);
+
+                this.txtHoraInicial.Text = dt.ToShortTimeString();
+            }
+
+            if (!this.txtDataHoraFinal.Text.Equals(String.Empty))
+            {
+                DateTime dt = Convert.ToDateTime(this.txtDataHoraFinal.Text);
+
+                this.calDataFinal.SelectedDate = new DateTime(dt.Year, dt.Month, dt.Day);
+
+                this.txtHoraFinal.Text = dt.ToShortTimeString();
+            }
         }
 
     }

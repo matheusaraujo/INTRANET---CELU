@@ -73,7 +73,7 @@
                 <li><a href="../BemEstar/HospedePermanentePagamento/hospedePermanentePagamento.aspx" target="frmMain">Hóspede Permanente - Pagamento</a></li>
                 <li><a href="../BemEstar/EspacoReserva/listEspacoReserva.aspx" target="frmMain">Espaços para Reserva</a></li>
                 <li><a href="../BemEstar/StatusReserva/listStatusReserva.aspx" target="frmMain">Status de Reserva</a></li>
-                <li><a href="../BemEstar/Reserva/cadReserva.aspx" target="frmMain">Controle de Reserva</a></li>
+                <li><a href="../BemEstar/Reserva/reserva.aspx" target="frmMain">Controle de Reserva</a></li>
             </ul></td></tr>
             
             <!-- MENU SISTEMA -->

@@ -27,7 +27,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Cadastro de Status de Reserva</h1>
+        <h1>Controle de Reservas</h1>
         <br />
         
         <table id="tblCadastro" runat="server" align="center" width="60%">
@@ -54,7 +54,7 @@
             <tr>
                 <td align="right">Data/hora inicial:&nbsp;</td>
                 <td>
-                    <asp:TextBox ID="txtDataHoraInicial" runat="server" style="display:none"></asp:TextBox>
+                    <asp:TextBox ID="txtDataHoraInicial" runat="server" style="display:hidden"></asp:TextBox>
                     <asp:Calendar ID="calDataInicial" runat="server"></asp:Calendar> <br />
                     <asp:TextBox ID="txtHoraInicial" runat="server"></asp:TextBox>&nbsp; <b>*</b>Deve estar no formato hh:mm
                 </td>
@@ -134,7 +134,7 @@
                 <td><asp:Button ID="btnSave" runat="server" Text="Salvar" onclick="btnSave_Click" /></td>                
                 <td><asp:Button ID="btnDel" runat="server" Text="Excluir" onclick="btnDel_Click" /></td>                
                 <td><asp:Button ID="btnNew" runat="server" Text="Novo" /></td>
-                <td><input type="button" value="Buscar" id="btnFind" runat="server" onclick="javascript:window.navigate('listStatusReserva.aspx');"/></td>
+                <td><input type="button" value="Buscar" id="btnFind" runat="server" onclick="javascript:window.navigate('reserva.aspx');"/></td>
             </tr>
         </table>
         
