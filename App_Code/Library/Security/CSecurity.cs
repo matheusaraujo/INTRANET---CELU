@@ -42,6 +42,7 @@ namespace Celu.Library.Security
         public const String CADASTRO_ESPACO_RESERVA = "4004";
         public const String CADASTRO_STATUS_RESERVA = "4005";
         public const String CONTROLE_RESERVA = "4006";
+        public const String CONTROLE_HOSPEDETE_TEMPORARIO = "4007";
 
     }
 }

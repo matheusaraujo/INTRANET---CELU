@@ -69,8 +69,9 @@
             <tr><td style="background-color:Gainsboro"><h3>BEM-ESTAR</h3></td></tr>
             <tr><td><ul>
                 <li><a href="../BemEstar/PersonaNonGrata/listPersonaNonGrata.aspx" target="frmMain">Persona Non Grata</a></li>
-                <li><a href="../BemEstar/HospedePermanente/listHospedePermanente.aspx" target="frmMain">Hóspede Permanente</a></li>
+                <li><a href="../BemEstar/HospedePermanente/listHospedePermanente.aspx" target="frmMain">Hóspede Permanente</a></li>                
                 <li><a href="../BemEstar/HospedePermanentePagamento/hospedePermanentePagamento.aspx" target="frmMain">Hóspede Permanente - Pagamento</a></li>
+                <li><a href="../BemEstar/HospedeTemporario/listHospedeTemporario.aspx" target="frmMain">Hóspede Temporário</a></li>
                 <li><a href="../BemEstar/EspacoReserva/listEspacoReserva.aspx" target="frmMain">Espaços para Reserva</a></li>
                 <li><a href="../BemEstar/StatusReserva/listStatusReserva.aspx" target="frmMain">Status de Reserva</a></li>
                 <li><a href="../BemEstar/Reserva/reserva.aspx" target="frmMain">Controle de Reserva</a></li>

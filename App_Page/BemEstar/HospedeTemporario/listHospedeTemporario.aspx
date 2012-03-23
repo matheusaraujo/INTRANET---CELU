@@ -1,12 +1,12 @@
 ﻿<!--
     INTRANET CELU
-    App_Page/BemEstar/Reserva/listReserva.aspx
-    Página de listagem de Reserva
-    # 2012-03-21
+    App_Page/BemEstar/HospedeTemporario/listHospedeTemporario.aspx
+    Página de listagem de Hóspede Temporário
+    # 2012-03-22
     Matheus Araújo
 -->
 
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="listReserva.aspx.cs" Inherits="App_Page_BemEstar_Reserva_listReserva" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="listHospedeTemporario.aspx.cs" Inherits="App_Page_BemEstar_HospedeTemporario_listHospedeTemporario" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -28,26 +28,10 @@
     <form id="form1" runat="server">
     <div>
     
-        <h1>Cadastro de Status de Reserva</h1>
+        <h1>Controle de Hóspede Temporário</h1>
         <br />
         
         <table align="center" width="50%">
-        
-            <tr>
-                <td align="center" colspan="4" align="center">
-                    <asp:DropDownList ID="slctTipoLista" runat="server">
-                        <asp:ListItem Value="1" Text="Listar por espaço físico"></asp:ListItem>
-                        <asp:ListItem Value="2" Text="Listar por data"></asp:ListItem>                        
-                        <asp:ListItem Value="3" Text="Listar por espaço físico e fata"></asp:ListItem>
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            
-            <tr>
-                <td align="right" width="30%" colspan="2">Espaço físico:&nbsp;</td>
-                <td><asp:DropDownList ID="slctEspacoFisico" runat="server" colspan="2"></asp:DropDownList></td>
-                
-            </tr>
             
             <tr>
                 <td align="right">Data inicial:&nbsp;</td>
@@ -70,12 +54,12 @@
         
         <table id="tblList" runat="server" style="width:80%" align="center">
             <tr style="background-color:Silver">
+                <td><h3>Data entrada</h3></td>
+                <td><h3>Data saída</h3></td>
                 <td><h3>Evento</h3></td>
-                <td><h3>Espaço</h3></td>
-                <td><h3>Responsável</h3></td>                
-                <td><h3>Data/Hora Início</h3></td>
-                <td><h3>Data/Hora Fim</h3></td>                
-                <td colspan="2"><h3>Status</h3></td>
+                <td><h3>Responsável</h3></td>        
+                <td><h3>Valor</h3></td>                                                        
+                <td colspan="2"><h3>Situação</h3></td>
             </tr>
         </table>
     
