@@ -42,10 +42,16 @@
             </tr>
             
             <tr>
-                <td colspan="4" align="center" style="border-top:solid 1px #000">
+                <td colspan="4" align="center">
                 <br />
                     <asp:Button ID="btnList" Text="Listar" runat="server" onclick="btnList_Click" />
                 </td>
+            </tr>
+            
+            <tr>
+                <td colspan="4" align="right"  style="border-top:solid 1px #000">
+                     <input type="button" value="Novo" onclick="javascript:window.navigate('cadHospedeTemporario.aspx');"/>
+                </td> 
             </tr>
         
         </table>

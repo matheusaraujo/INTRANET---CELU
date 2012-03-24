@@ -31,7 +31,7 @@ public partial class App_Page_BemEstar_HospedeTemporario_listHospedeTemporario :
     public override bool loadPage()
     {
 
-        base.setISqlLoad("EXECUTE LOAD_LIST_HOSPEDE_TEMPORARIO " +            
+        base.setISqlLoad("EXECUTE LOAD_LIST_HOSPEDE_TEMPORARIO '" +            
             this.calDataInicial.SelectedDate.Year + "-" + this.calDataInicial.SelectedDate.Month + "-" + this.calDataInicial.SelectedDate.Day + "','" +
             this.calDataFinal.SelectedDate.Year + "-" + this.calDataFinal.SelectedDate.Month + "-" + this.calDataFinal.SelectedDate.Day + "'");
 
